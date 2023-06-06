@@ -7,7 +7,7 @@
 
 # 2. Notepad menggunakan Tkinter dengan Python: Tkinter adalah paket GUI dari python. Kita dapat membuat notepad sederhana yang terdiri dari berbagai menu seperti cara menyimpan, membuka, dan mengedit file.
  # Jawaban :
- from tkinter import *# Mengimpor modul tkinter
+- from tkinter import *# Mengimpor modul tkinter
 from tkinter import filedialog # Mengimpor modul filedialog dari tkinter
 
 root = Tk() # Membuat objek Tkinter
@@ -16,7 +16,7 @@ root.title("Notepad") # Mengatur judul jendela menjadi "Notepad"
 root.config(bg='lightblue') # Mengatur latar belakang jendela menjadi "lightblue"
 root.resizable(False,False) # Membuat jendela tidak dapat diubah ukurannya
 
-def save_file(): # Membuat fungsi save_file untuk menyimpan file
+- def save_file(): # Membuat fungsi save_file untuk menyimpan file
     open_file = filedialog.asksaveasfile(mode='w',defaultextension='.txt') # Membuka dialog untuk menyimpan file
     if open_file is None:  # Jika file tidak dipilih
         return # Keluar dari fungsi save_file
@@ -25,7 +25,7 @@ def save_file(): # Membuat fungsi save_file untuk menyimpan file
     open_file.write(text) # Tulis teks ke dalam file
     open_file.close()  # Menutup file
     
-def open_file(): # Membuat fungsi open_file untuk membuka file
+- def open_file(): # Membuat fungsi open_file untuk membuka file
     file=filedialog.askopenfile(mode='r',filetype=[('text files','*.txt')]) # Buka dialog untuk membuka file
     if file is not None: # Jika file terbuka dengan sukses
         content=file.read()# Baca konten dari file
